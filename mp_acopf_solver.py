@@ -1,7 +1,7 @@
 import pyomo.environ as pyo
 
 def solve_multi_period(model, solver_name, solver_options, tee=True):
-    """Solve the multi-period ACOPF-with-storage-and-solar model."""
+    """Solve the multi-period ACOPF with storage"""
     if solver_options is None:
         solver_options = {"tol": 1e-6}
 
