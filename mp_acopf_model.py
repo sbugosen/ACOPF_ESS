@@ -33,9 +33,9 @@ def build_multi_period_acopf_with_storage(
       e_t        [0, E_max]      (energy storage level of the battery, pu·h)
       p_ch_t     [0, P_ch_max]   (charge power or power input to battery, pu)
       p_dis_t    [0, P_dis_max]  (discharge power or power output of battery, pu)
-      e_t = e_{t-1} + eff_ch * dt * p_ch_t - (dt / eff_dis) * p_dis_t
+      e_t = e_{t-1} + eta_ch * dt * p_ch_t - (dt / eta_dis) * p_dis_t
       Nodal balance at storage bus b:
-          (original P-balance) + p_dis_t - p_ch_t = 0
+          (original Nodal balance) + p_dis_t - p_ch_t = 0
 
     Solar model:
       - A generator 'solar_gen_name' is created at 'solar_bus'
